@@ -44,7 +44,12 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # aliases
 alias ls='ls --color'
 alias vi='nvim'
-
+alias zshrc='nvim ~/.zshrc'
+alias reload='source ~/.zshrc'
 # shell integrations 
 eval "$(fzf --zsh)" 
 eval "$(zoxide init zsh)"
+
+# sdkman setup (requires sdkman to be installed)
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+alias sdklist='(z ~/.sdkman/candidates/java && ls -1)'
